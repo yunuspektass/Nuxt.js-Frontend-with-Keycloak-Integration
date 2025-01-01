@@ -1,69 +1,78 @@
-# web_app_keycloak
+### **Başlık**
+`Nuxt.js Frontend with Keycloak Integration`
 
-## Build Setup
+---
 
-```bash
-# install dependencies
-$ yarn install
+### **README.md**
 
-# serve with hot reload at localhost:3000
-$ yarn dev
+```markdown
+## Nuxt.js Frontend with Keycloak Integration
 
-# build for production and launch server
-$ yarn build
-$ yarn start
+This project is a **Nuxt.js** frontend that integrates with **Keycloak Identity Server** for secure authentication and role-based access. It interacts with the [ASP.NET Core Web API with Keycloak Integration](https://github.com/yunuspektass/ASP.NET-Core-Web-API-Keycloak-Integration) backend.
 
-# generate static project
-$ yarn generate
+### Features
+- **Authentication**: Secure login using Keycloak.
+- **Protected Routes**: Role-based access control for frontend routes.
+- **API Integration**: Seamless interaction with the backend API.
+
+### Technologies
+- **Nuxt.js** (Frontend Framework)
+- **Vuetify** (Material Design Component Framework)
+- **Keycloak** (Identity Server)
+- **Axios** (For API requests)
+
+### How to Run
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/yunuspektass/Nuxt-Frontend-Keycloak-Integration.git
+   ```
+2. **Set Up Keycloak**:
+   - Install and configure Keycloak (local or remote).
+   - Create a realm, client, and roles in Keycloak.
+   - Update the Keycloak configuration in `nuxt.config.js`:
+     ```javascript
+     keycloak: {
+       realm: 'your-realm',
+       url: 'https://your-keycloak-server/auth',
+       clientId: 'your-client-id'
+     }
+     ```
+3. **Run the Project**:
+   - Install dependencies:
+     ```bash
+     npm install
+     ```
+   - Run the project:
+     ```bash
+     npm run dev
+     ```
+
+### Example Pages
+- **Login**: `/login` - Secure login using Keycloak.
+- **Dashboard**: `/dashboard` - Display user information and roles.
+- **Protected Page**: `/protected` - Accessible only to authorized users.
+
+### Backend Integration
+This frontend interacts with the [ASP.NET Core Web API with Keycloak Integration](https://github.com/yunuspektass/ASP.NET-Core-Web-API-Keycloak-Integration) backend. Make sure the backend is running and properly configured.
+
+### Contributing
+Contributions are welcome! Fork the repository, create a new branch, and submit a pull request.
+
+### License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+### Why Keycloak?
+Keycloak is an open-source identity and access management solution that provides secure authentication and authorization for modern applications.
+
+### Why Nuxt.js?
+Nuxt.js simplifies the development of server-side rendered (SSR) and static web applications with its modular structure and automatic routing.
+
+---
+
+### Links
+- [Keycloak Documentation](https://www.keycloak.org/documentation)
+- [Nuxt.js Documentation](https://nuxtjs.org/docs)
+- [Vuetify Documentation](https://vuetifyjs.com)
 ```
-
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
-
-## Special Directories
-
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
-
-### `assets`
-
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
-
-### `components`
-
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
-
-### `layouts`
-
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
-
-
-### `pages`
-
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
-
-### `plugins`
-
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
-
-### `static`
-
-This directory contains your static files. Each file inside this directory is mapped to `/`.
-
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
-
-### `store`
-
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
